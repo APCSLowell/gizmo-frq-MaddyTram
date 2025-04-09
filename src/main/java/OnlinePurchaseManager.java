@@ -11,14 +11,12 @@ public class OnlinePurchaseManager
   */
   public int countElectronicsByMaker(String maker)
   {
-    int num = 0;
-    for(int i = 0; i < purchases.size(); i++) {
-      gizmo g = purchases.get(i);
-      if(g.isElectronic() && g.getMaker().equals(maker)) {
-        num++;
+    int count = 0;
+    for (int i = 0; i < purchases.size(); i++){
+	    if(purchases.get(i).isElectronic() && purchases.get(i).getMaker().equals(maker)){
+        count++;
       }
     }
-      return num;
   }
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
@@ -30,7 +28,8 @@ public class OnlinePurchaseManager
       if(purchases.get(i).equals(purchases.get(i + 1))) {
         return true;
       }
-      return false;
+    }
+    return false;
   }
   public OnlinePurchaseManager()
   {
