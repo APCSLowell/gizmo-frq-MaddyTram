@@ -16,7 +16,8 @@ public class OnlinePurchaseManager
       if(purchases.get(i).isElectronic() && purchases.get(i).getMaker().equals(maker)) {
         num++;
       }
-      return 0;
+    }
+      return num;
   }
   
   /** Returns true if any pair of adjacent purchased Gizmo objects are
